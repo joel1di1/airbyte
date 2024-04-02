@@ -34,6 +34,11 @@
         "item": "string",
         "title": "Discover Event Fields",
         "description": "Fields to retrieve when fetching discover events"
+      },
+      "issue_query": {
+        "type": "string",
+        "title": "Structured search query",
+        "description": "Query to filter issues."
       }
     }
   }
