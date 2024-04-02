@@ -117,7 +117,7 @@ definitions:
       requester:
         $ref: "#/definitions/requester"
         request_parameters:
-          query: "lastSeen:>{{ stream_state.get(parameters['cursor_field']) or '1900-01-01T00:00:00.0Z' if stream_state else '1900-01-01T00:00:00.0Z' }}"
+          query: "{{ config['issue_query'] }} lastSeen:>{{ stream_state.get(parameters['cursor_field']) or '1900-01-01T00:00:00.0Z' if stream_state else '1900-01-01T00:00:00.0Z' }}"
       record_selector:
         $ref: "#/definitions/record_selector"
       paginator:
